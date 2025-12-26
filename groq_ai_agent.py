@@ -6,7 +6,7 @@ from groq import Groq
 
 # --- CONFIGURATION ---
 # Get your free key at: https://console.groq.com/keys
-os.environ["GROQ_API_KEY"] = "$GROQ"
+os.environ["GROQ_API_KEY"] = os.path.expandvars("${GROQ}")
 
 client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
